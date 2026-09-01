@@ -1,316 +1,364 @@
-/* ============================================= */
-/* === GLOBAL RESET - FOR ALL PAGES === */
-/* ============================================= */
+/* ----------------------------------------------
+   RESET & BASE
+   ---------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', Arial, sans-serif
 }
-
-/* ============================================= */
-/* === HOME PAGE + ALL PAGES SHARED === */
-/* === index.html, about.html, classes.html, admission.html, contact.html === */
-/* ============================================= */
-
-/* TOPBAR - For all pages - Blue small bar */
-.topbar {
-    background: #0A3D8F;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 50px;
-    font-size: 13px
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #303a4d;
+    background: #f1f2f8;
 }
-
-/* HEADER - For all pages - Navigation */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 12px
-}
-
-.logo-text h2 {
-    color: #0A3D8F;
-    line-height: 1.1;
-    font-size: 20px
-}
-
-.logo-text p {
-    font-size: 12px;
-    color: #666
-}
-
-nav a {
-    margin: 0 12px;
-    color: #222;
+a {
+    color: #303a4d;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 14px
 }
+a:hover { color: #676c77; }
+img { max-width: 100%; height: auto; }
+ul { padding-left: 20px; }
+h1, h2, h3, h4 { color: #303a4d; }
 
-nav a.active {
-    color: #0A3D8F;
-    border-bottom: 3px solid #0A3D8F;
-    padding-bottom: 5px
-}
-
-.btn-portal {
-    background: #FFC107;
-    color: #000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 700;
-    margin-left: 10px
-}
-
-/* ============================================= */
-/* === HOME PAGE ONLY - index.html === */
-/* ============================================= */
-
-/* HERO - ONLY for index.html homepage */
-.hero {
-    background: linear-gradient(90deg, #0A3D8F 70%, rgba(10, 61, 143, 0.4) 100%), url('../images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    padding-left: 80px;
-    color: white
-}
-
-.hero h1 {
-    font-size: 52px;
-    line-height: 1.1;
-    margin: 15px 0
-}
-
-.hero h5 {
-    color: #FFC107;
-    letter-spacing: 3px
-}
-
-.btn-yellow {
-    background: #FFC107;
-    color: #000;
-    padding: 12px 28px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 700;
+/* ----------------------------------------------
+   BUTTONS
+   ---------------------------------------------- */
+.btn {
     display: inline-block;
-    margin-right: 10px
+    padding: 12px 30px;
+    border-radius: 100px;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+.btn-primary {
+    background: #303a4d;
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #676c77;
+    color: #fff;
+}
+.btn-secondary {
+    background: #e1e4eb;
+    color: #303a4d;
+}
+.btn-secondary:hover {
+    background: #303a4d;
+    color: #fff;
+}
+.btn-outline {
+    background: transparent;
+    border-color: #303a4d;
+    color: #303a4d;
+}
+.btn-outline:hover {
+    background: #303a4d;
+    color: #fff;
+}
+.btn-small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
 }
 
-.btn-white {
-    border: 2px solid white;
-    color: white;
-    padding: 10px 28px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block
+/* ----------------------------------------------
+   HEADER
+   ---------------------------------------------- */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    position: relative;
+    z-index: 10;
+}
+.header-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.branding .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.site-title-wrap .site-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: block;
+    line-height: 1.2;
+}
+.site-tagline {
+    font-size: 0.9rem;
+    color: #676c77;
+    display: block;
+}
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.main-nav a {
+    font-size: 1rem;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+.main-nav a.active,
+.main-nav a:hover {
+    border-bottom-color: #303a4d;
+}
+.header-cta .btn {
+    font-size: 0.95rem;
+    padding: 8px 20px;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #303a4d;
+    border-radius: 3px;
+}
+.mobile-nav {
+    display: none;
+    background: #fff;
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+}
+.mobile-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.mobile-nav a {
+    font-size: 1.1rem;
 }
 
-/* ============================================= */
-/* === ALL CONTENT PAGES SHARED === */
-/* === about.html, classes.html, admission.html, contact.html === */
-/* ============================================= */
-
-.main-grid {
-    padding: 50px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-    background: #f8f9fa
+/* ----------------------------------------------
+   HERO
+   ---------------------------------------------- */
+.hero {
+    background: linear-gradient(135deg, #303a4d 0%, #676c77 100%);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
 }
-
-.section-title {
-    color: #0A3D8F;
-    border-left: 5px solid #FFC107;
-    padding-left: 12px;
-    margin-bottom: 20px
+.hero h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
 }
-
-.news-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
-    margin-bottom: 20px
+.hero-sub {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
 }
-
-.news-img {
-    height: 260px;
-    background: #ddd;
-    background-size: cover;
-    background-position: center
-}
-
-.news-body {
-    padding: 20px
-}
-
-.news-card-small {
+.hero-buttons {
     display: flex;
     gap: 15px;
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07)
+    justify-content: center;
+    flex-wrap: wrap;
 }
+.hero-buttons .btn-primary { background: #fff; color: #303a4d; }
+.hero-buttons .btn-primary:hover { background: #e1e4eb; }
+.hero-buttons .btn-secondary { background: transparent; border-color: #fff; color: #fff; }
+.hero-buttons .btn-secondary:hover { background: #fff; color: #303a4d; }
 
-.badge-red {
-    background: #E53935;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: 700
+/* ----------------------------------------------
+   FEATURES
+   ---------------------------------------------- */
+.features {
+    padding: 60px 0;
+    background: #fff;
 }
-
-.badge-blue {
-    background: #0A3D8F;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 11px
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
 }
-
-.info-box {
-    background: #0A3D8F;
-    color: white;
-    border-radius: 12px;
-    padding: 25px
-}
-
-.btn-apply {
-    background: white;
-    color: #0A3D8F;
-    display: block;
+.feature-card {
     text-align: center;
-    padding: 12px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f9fafb;
+    transition: 0.3s;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+.feature-icon {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+.feature-card h3 { margin-bottom: 8px; }
+
+/* ----------------------------------------------
+   NEWS PREVIEW
+   ---------------------------------------------- */
+.news-preview {
+    padding: 60px 0;
+    background: #f1f2f8;
+}
+.news-preview h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+.news-item {
+    background: #fff;
+    padding: 20px;
     border-radius: 6px;
-    text-decoration: none;
-    font-weight: 800;
-    margin-top: 15px
+}
+.news-item h3 { font-size: 1.2rem; margin-bottom: 5px; }
+.news-meta {
+    font-size: 0.85rem;
+    color: #676c77;
+    margin-bottom: 10px;
+}
+.news-cta {
+    text-align: center;
+    margin-top: 30px;
 }
 
-/* ============================================= */
-/* === ABOUT PAGE ONLY - about.html === */
-/* ============================================= */
-/* About uses .news-card for history text - no extra CSS needed */
-/* You can add: */
-.about-banner {
-    background: #0A3D8F;
-    color: white;
-    padding: 40px;
-    text-align: center
+/* ----------------------------------------------
+   PAGE CONTENT (About, Departments, etc.)
+   ---------------------------------------------- */
+.page-content {
+    padding: 50px 0;
+    background: #fff;
 }
+.page-header { margin-bottom: 30px; }
+.page-hero-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+.page-body h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.page-body ul {
+    margin-bottom: 20px;
+}
+.department-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+.dept-card {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #303a4d;
+}
+.dept-card h3 { margin-bottom: 10px; }
+.dept-card .btn { margin-top: 10px; }
 
-/* ============================================= */
-/* === CLASSES PAGE ONLY - classes.html === */
-/* ============================================= */
-/* Classes uses same .news-card but list style */
-.classes-grid {
+/* ----------------------------------------------
+   CONTACT
+   ---------------------------------------------- */
+.contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px
+    gap: 40px;
+    margin-top: 30px;
 }
-
-/* ============================================= */
-/* === ADMISSION PAGE ONLY - admission.html === */
-/* ============================================= */
-.input {
+.contact-info p { margin-bottom: 12px; }
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    padding: 12px;
-    margin: 8px 0;
+    padding: 10px 12px;
     border: 1px solid #ddd;
-    border-radius: 5px
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+.contact-form button {
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
 }
 
-.admission-form {
-    background: #FFF8E1;
-    border: 2px solid #FFC107;
-    border-radius: 12px
+/* ----------------------------------------------
+   FOOTER
+   ---------------------------------------------- */
+.site-footer {
+    background: #fff;
+    border-top: 1px solid #ddd;
+    padding: 30px 0;
 }
-
-/* ============================================= */
-/* === CONTACT PAGE ONLY - contact.html === */
-/* ============================================= */
-/* Map is iframe - only on contact.html */
-.map-box {
-    border-radius: 10px;
-    overflow: hidden;
-    border: 0
-}
-
-/* ============================================= */
-/* === FOOTER - FOR ALL PAGES === */
-/* ============================================= */
-footer {
-    background: #061a40;
-    color: #cbd5e1
-}
-
 .footer-grid {
-    padding: 50px;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 30px
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
 }
-
-.footer-grid h3,
-.footer-grid h4 {
-    color: white;
-    margin-bottom: 15px
-}
-
-.footer-grid ul {
+.footer-nav ul {
     list-style: none;
-    line-height: 2
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
 }
-
-.copyright {
-    background: #04102e;
+.footer-nav a { font-size: 1rem; }
+.footer-tagline {
     text-align: center;
-    padding: 15px;
-    color: #8da0c0;
-    font-size: 13px
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.footer-copy {
+    text-align: right;
+    font-size: 0.95rem;
+    color: #676c77;
 }
 
-/* ============================================= */
-/* === MOBILE RESPONSIVE - FOR ALL PAGES === */
-/* ============================================= */
-@media(max-width:768px) {
-
-    header,
-    .topbar,
-    .main-grid,
+/* ----------------------------------------------
+   RESPONSIVE
+   ---------------------------------------------- */
+@media (max-width: 920px) {
+    .main-nav, .header-cta { display: none; }
+    .menu-toggle { display: flex; }
+    .mobile-nav.active { display: block; }
+    .hero h1 { font-size: 2.5rem; }
+    .contact-grid { grid-template-columns: 1fr; }
     .footer-grid {
         grid-template-columns: 1fr;
-        flex-direction: column;
-        padding: 20px
+        text-align: center;
     }
-
-    .hero {
-        padding-left: 20px;
-        height: 60vh
-    }
-
-    .hero h1 {
-        font-size: 32px
-    }
+    .footer-nav ul { justify-content: center; }
+    .footer-copy { text-align: center; }
+}
+@media (max-width: 600px) {
+    .hero { padding: 50px 0; }
+    .hero h1 { font-size: 2rem; }
+    .feature-grid { grid-template-columns: 1fr 1fr; }
 }
