@@ -247,7 +247,7 @@ h1, h2, h3, h4 { color: #303a4d; }
    ---------------------------------------------- */
 .page-content {
     padding: 50px 0;
-    background: #fff;
+    background: #c3d5f1af;
 }
 .page-header { margin-bottom: 30px; }
 .page-hero-img {
@@ -307,6 +307,16 @@ h1, h2, h3, h4 { color: #303a4d; }
     margin-top: 20px;
     border: none;
     cursor: pointer;
+}
+.contact-form{
+    background: #c3d5f1af;
+    border-radius:8px;
+    color:black;
+    padding:20px;
+}
+.contact-info{
+    background:#c3d5f1af;
+    padding:20px;
 }
 
 /* --- FOOTER 5 VERTICAL COLUMNS --- */
@@ -370,6 +380,9 @@ h1, h2, h3, h4 { color: #303a4d; }
     .container .header-grid{
         display:flex;
     }
+     .contact-form{
+        margin-top:40px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -382,5 +395,9 @@ h1, h2, h3, h4 { color: #303a4d; }
     }
     .container .header-grid{
         display:flex;
+        padding:20px;
+    }
+    .contact-form{
+        margin-top:40px;
     }
 }
