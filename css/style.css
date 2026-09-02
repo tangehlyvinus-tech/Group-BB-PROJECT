@@ -361,11 +361,13 @@ h1, h2, h3, h4 { color: #303a4d; }
 @media (max-width: 900px) {
     .footer-grid-5 {
         grid-template-columns: repeat(2, 1fr);
+        display: block;
     }
 }
 
 @media (max-width: 500px) {
     .footer-grid-5 {
         grid-template-columns: 1fr;
+        display:block;
     }
 }
