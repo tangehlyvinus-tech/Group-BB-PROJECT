@@ -367,6 +367,9 @@ h1, h2, h3, h4 { color: #303a4d; }
     .contact-grid{
         display: block;
     }
+    .container .header-grid{
+        display:flex;
+    }
 }
 
 @media (max-width: 500px) {
@@ -376,5 +379,8 @@ h1, h2, h3, h4 { color: #303a4d; }
     }
     .contact-grid{
         display: block;
+    }
+    .container .header-grid{
+        display:flex;
     }
 }
