@@ -153,7 +153,7 @@ h1, h2, h3, h4 { color: #303a4d; }
    HERO
    ---------------------------------------------- */
 .hero {
-    background: linear-gradient(135deg, #303a4d 0%, #676c77 100%);
+    background-image: url(school.jpeg);
     color: #fff;
     padding: 80px 0;
     text-align: center;
