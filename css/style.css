@@ -202,7 +202,7 @@ h4 {
    HERO
    ---------------------------------------------- */
 .hero {
-    background: linear-gradient(135deg, #303a4d 0%, #676c77 100%);
+    background-image: url(school.jpeg);
     color: #fff;
     padding: 80px 0;
     text-align: center;
@@ -528,6 +528,7 @@ h4 {
 
     .footer-grid-5 {
         grid-template-columns: repeat(2, 1fr);
+        display: block;
     }
 }
 
@@ -553,6 +554,7 @@ h4 {
     .news-grid,
     .department-grid {
         grid-template-columns: 1fr;
+        display:block;
     }
 
     .footer-grid-5 {
