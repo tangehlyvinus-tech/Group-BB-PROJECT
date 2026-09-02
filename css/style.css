@@ -153,7 +153,7 @@ h1, h2, h3, h4 { color: #303a4d; }
    HERO
    ---------------------------------------------- */
 .hero {
-   background-image:url('image/school.jpeg');
+   background-image:url('/Group-BB-PROJECT/css/school.jpeg')!important;
     color: #fff;
     padding: 80px 0;
     text-align: center;
