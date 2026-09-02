@@ -154,6 +154,7 @@ h1, h2, h3, h4 { color: #303a4d; }
    ---------------------------------------------- */
 .hero {
     background-image: url(school.jpeg);
+    background: cover;
     color: #fff;
     padding: 80px 0;
     text-align: center;
