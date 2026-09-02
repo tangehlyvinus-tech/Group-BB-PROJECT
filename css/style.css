@@ -571,6 +571,9 @@ h4 {
     .footer-col:last-child {
         border: none;
     }
+    .footer-grid-5{
+        display:block;
+    }
 }
 
 const menuToggle=document.getElementById('menuToggle');
